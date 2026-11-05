@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Comuni -->
+    <string name="back">Indietro</string>
+    <string name="close">Chiudi</string>
+    <string name="save">Salva</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">OK</string>
+    <string name="delete">Elimina</string>
+    <string name="edit">Modifica</string>
+    <string name="duplicate">Duplica</string>
+    <string name="more_options">Altre opzioni</string>
+    <string name="settings">Impostazioni</string>
+    <string name="name">Nome</string>
+    <string name="notes">Note</string>
+    <string name="color_n">Colore %1$d</string>
+    <string name="minutes">Minuti</string>
+    <string name="seconds">Secondi</string>
+    <string name="kg_value">%1$s kg</string>
+    <string name="no_value">—</string>
+
+    <!-- Navigazione -->
+    <string name="tab_timers">Timer</string>
+    <string name="tab_programs">Programmi</string>
+    <string name="tab_measures">Massimali</string>
+    <string name="tab_history">Storico</string>
+
+    <!-- Timer -->
+    <string name="my_timers">I miei timer</string>
+    <string name="new_timer">Nuovo timer</string>
+    <string name="timer">Timer</string>
+    <string name="timers_empty">Nessun timer. Tocca + per crearne uno.</string>
+    <string name="delete_timer_title">Eliminare il timer?</string>
+    <string name="delete_timer_text">\"%1$s\" verrà eliminato.</string>
+    <string name="total_duration">Durata totale %1$s</string>
+    <string name="rounds">Round</string>
+    <string name="cycles">Cicli</string>
+    <string name="prepare_hint">Conto alla rovescia prima di iniziare</string>
+    <string name="work_hint">Fai esercizi per questo tempo</string>
+    <string name="rest_hint">Tra un round e l\'altro (pausa e break lo sostituiscono)</string>
+    <string name="rounds_hint">Un round è lavoro + riposo</string>
+    <string name="cycles_hint">Numero di ripetizioni di tutte le serie</string>
+    <string name="cycle_rest_hint">Intervallo di recupero (cambio mano e peso)</string>
+    <string name="cooldown_hint">Pausa finale, dopo l\'ultimo lavoro</string>
+    <string name="remove_phase">Togli %1$s</string>
+    <!-- Timer in esecuzione -->
+    <string name="edit_timer">Modifica timer</string>
+    <string name="edit_sounds">Modifica suoni</string>
+    <string name="see_intervals">Vedi intervalli</string>
+    <string name="next">Prossimo</string>
+    <!-- Su due righe: i contatori ai lati di play restano allineati. -->
+    <string name="rounds_left">Round\nrimasti</string>
+    <string name="cycles_left">Cicli\nrimasti</string>
+    <string name="side_right">Destra</string>
+    <string name="side_left">Sinistra</string>
+    <string name="change_label">Cambia →</string>
+    <string name="round_cycle">R%1$d · C%2$d</string>
+    <string name="stop_timer_title">Fermare il timer?</string>
+    <string name="stop_timer_text">Il timer in corso verrà interrotto.</string>
+    <!-- Massimali -->
+    <string name="new_measure_type">Nuovo tipo di massimale</string>
+    <string name="measures_empty">Nessun massimale. Tocca + per creare un tipo (es. \"Dinamometro 20 mm\").</string>
+    <string name="no_measures_yet">Nessuna misura registrata</string>
+    <string name="latest_measure">Ultimo: %1$s · %2$s</string>
+    <string name="right_left_values">%1$s / %2$s</string>
+    <string name="measure_type">Tipo di massimale</string>
+    <string name="measure_name_hint">Es. Dinamometro 20 mm</string>
+    <string name="unit">Unità</string>
+    <string name="per_side">Per mano</string>
+    <string name="per_side_hint">Registra un valore per la destra e uno per la sinistra</string>
+    <string name="per_side_locked">Non modificabile: ci sono già misure registrate</string>
+    <string name="invalid_number">Numero non valido</string>
+    <string name="new_measure">Nuova misura</string>
+    <string name="edit_measure">Modifica misura</string>
+    <string name="date_value">Data: %1$s</string>
+    <string name="value">Valore</string>
+    <string name="note">Nota</string>
+    <string name="delete_measure_type_title">Eliminare il tipo di massimale?</string>
+    <string name="delete_measure_type_text">\"%1$s\" e tutte le sue misure verranno eliminati. I blocchi che lo usano resteranno senza peso.</string>
+    <!-- Programmi -->
+    <string name="new_program">Nuovo programma</string>
+    <string name="programs_empty">Nessun programma. Tocca + per crearne uno, poi aggiungi sedute e blocchi.</string>
+    <string name="rename">Rinomina</string>
+    <string name="edit_notes">Modifica note</string>
+    <string name="new_session">Nuova seduta</string>
+    <string name="sessions_empty">Nessuna seduta. Aggiungine una con il pulsante in basso.</string>
+    <string name="move_up">Sposta su</string>
+    <string name="move_down">Sposta giù</string>
+    <string name="attach_document">Allega documento</string>
+    <string name="open">Apri</string>
+    <string name="replace">Sostituisci</string>
+    <string name="remove">Rimuovi</string>
+    <string name="attachment_error">Impossibile allegare il documento.</string>
+    <string name="no_app_for_document">Nessuna app installata può aprire questo documento.</string>
+    <string name="delete_program_title">Eliminare il programma?</string>
+    <string name="delete_program_text">\"%1$s\" con sedute, blocchi e documento verrà eliminato. Lo storico resta.</string>
+    <string name="delete_session_title">Eliminare la seduta?</string>
+    <string name="delete_session_text">\"%1$s\" e i suoi blocchi verranno eliminati. Lo storico resta.</string>
+
+    <!-- Blocco -->
+    <string name="block">Blocco</string>
+    <string name="block_name_hint">Es. Ripetute 7:3</string>
+    <string name="exercise">Esercizio</string>
+    <string name="exercise_hint">Es. No-hang</string>
+    <string name="equipment">Attrezzo</string>
+    <string name="equipment_hint">Es. Travetto 20 mm, mezza arcuata</string>
+    <string name="side">Mano</string>
+    <string name="side_mode_none">Nessuna</string>
+    <string name="side_mode_both">Entrambe</string>
+    <string name="side_mode_alt_right">Alternato (inizia dx)</string>
+    <string name="side_mode_alt_left">Alternato (inizia sx)</string>
+    <string name="alternate_hint">Ogni ciclo è una mano: la pausa tra i cicli serve a cambiare mano e peso.</string>
+    <string name="load">Carico</string>
+    <string name="load_none">Nessuno</string>
+    <string name="load_fixed">kg</string>
+    <string name="load_fixed_per_side">kg dx + sx</string>
+    <string name="load_percent">% massimale</string>
+    <string name="choose_measure_type">Scegli il massimale</string>
+    <string name="no_measure_types">Crea prima un tipo in Massimali</string>
+    <string name="percent">Percentuale</string>
+    <string name="copy_from_timer">Copia da timer salvato</string>
+    <string name="right_short">Dx %1$s</string>
+    <string name="left_short">Sx %1$s</string>
+    <string name="missing_max_warning">Manca il massimale per almeno una mano: il peso apparirà come —.</string>
+    <!-- Seduta -->
+    <string name="add_block">Aggiungi blocco</string>
+    <string name="finish_session">Termina seduta</string>
+    <string name="blocks_empty">Nessun blocco. Aggiungine uno con il pulsante in basso.</string>
+    <string name="other_session_open">La seduta \"%1$s\" è ancora aperta.</string>
+    <string name="close_other_session">Chiudi quella seduta</string>
+    <string name="done">Fatto</string>
+    <string name="start">Avvia</string>
+    <string name="repeat">Ripeti</string>
+    <string name="last_time">Ultima volta: %1$s</string>
+    <string name="pump_value">ghisa %1$d</string>
+    <string name="delete_block_title">Eliminare il blocco?</string>
+    <string name="delete_block_text">\"%1$s\" verrà eliminato. Lo storico resta.</string>
+    <!-- Risultati e storico -->
+    <string name="results">Risultati</string>
+    <string name="planned">Previsto: %1$s</string>
+    <string name="reps_value" tools:ignore="PluralsCandidate">%1$d rip</string>
+    <string name="not_completed">Non completato</string>
+    <string name="session_note">Nota sulla seduta</string>
+    <string name="history_empty">Nessuna seduta registrata. Avvia un blocco da Programmi.</string>
+    <string name="workout_in_progress">in corso</string>
+    <string name="done_value">Fatto: %1$s</string>
+    <string name="delete_workout_title">Eliminare la seduta dallo storico?</string>
+    <string name="delete_workout_text">I risultati registrati verranno eliminati.</string>
+    <!-- Impostazioni -->
+    <string name="audio_settings">Impostazioni audio</string>
+    <string name="general">Generali</string>
+    <string name="keep_screen_on">Schermo sempre acceso</string>
+    <string name="keep_screen_on_hint">Mentre il timer è aperto</string>
+    <string name="allow_rotation">Rotazione</string>
+    <string name="allow_rotation_hint">Consenti la rotazione dello schermo mentre il timer è attivo</string>
+    <string name="open_last_timer">Apri ultimo timer</string>
+    <string name="open_last_timer_hint">Avvia l\'ultimo timer salvato all\'apertura dell\'app</string>
+    <string name="screen_flash">Flash schermo</string>
+    <string name="screen_flash_hint">Lampo bianco a ogni cambio di fase</string>
+    <string name="soft_colors">Colori tenui</string>
+    <string name="rounding_step">Arrotondamento pesi</string>
+    <string name="rounding_step_hint">I pesi calcolati in percentuale vengono arrotondati a questo passo.</string>
+    <string name="phase_colors">Colori delle fasi</string>
+    <string name="reset_colors">Ripristina colori</string>
+    <string name="general_volume">Volume generale</string>
+    <string name="work_sound">Suono inizio lavoro</string>
+    <string name="rest_sound">Suono inizio riposo</string>
+    <string name="tone_beep">Bip</string>
+    <string name="tone_pip">Doppio bip</string>
+    <string name="tone_chime">Campanello</string>
+    <string name="tone_alarm">Allarme</string>
+    <string name="voice_cues">Avvisi vocali</string>
+    <string name="voice_cues_hint">Nomi delle fasi e cambio mano con il peso</string>
+    <string name="countdown_321" tools:ignore="TypographyDashes">3-2-1</string>
+    <string name="ten_seconds_left">10 s rimanenti</string>
+    <string name="halfway">Metà</string>
+    <string name="interval_name">Nome intervallo</string>
+    <string name="ticking">Ticchettio</string>
+    <string name="interval_sound">Suono intervallo</string>
+    <string name="vibration">Vibrazione</string>
+    <string name="duck_music">Riduzione volume musica</string>
+    <string name="duck_music_hint">Abbassa la musica durante i segnali</string>
+    <string name="silent_mode_note">I suoni e la voce seguono il volume multimediale: si sentono anche con il telefono in silenzioso o in vibrazione.</string>
+    <!-- Backup -->
+    <string name="backup">Backup</string>
+    <string name="backup_hint">I dati sono solo su questo telefono. Esporta un file per conservarli o trasferirli. I documenti allegati ai programmi non sono inclusi.</string>
+    <string name="export_data">Esporta dati</string>
+    <string name="import_data">Importa dati</string>
+    <string name="export_done">Esportazione completata.</string>
+    <string name="export_failed">Esportazione non riuscita.</string>
+    <string name="import_done">Dati importati.</string>
+    <string name="import_invalid">File non valido: nessun dato è stato modificato.</string>
+    <string name="import_confirm_title">Importare i dati?</string>
+    <string name="import_confirm_text">Tutti i timer, programmi, massimali e lo storico attuali verranno sostituiti dal contenuto del file.</string>
+    <string name="attachment_missing">Documento non trovato su questo telefono: allegalo di nuovo.</string>
+    <string name="timer_running_back">Timer in corso · tocca per tornare</string>
+    <string name="restart_block">Riavvia</string>
+    <string name="restart_block_title">Riavviare il blocco?</string>
+    <string name="restart_block_text">Il blocco riparte da Prepara. La seduta registrata resta la stessa.</string>
+    <string name="drag_to_reorder">Trascina per riordinare</string>
+    <string name="cues_section">Segnali</string>
+    <string name="block_of">%1$s · %2$s</string>
+    <string name="next_block">Prossimo blocco</string>
+    <string name="start_session">Avvia seduta</string>
+    <string name="continue_session">Continua seduta</string>
+    <string name="edit_timer_hint">Le modifiche valgono subito e vengono salvate nel timer o nel blocco.</string>
+    <string name="apply">Applica</string>
+    <string name="restart_session">Riavvia seduta</string>
+    <string name="restart_session_title">Riavviare la seduta?</string>
+    <string name="restart_session_text">I blocchi fatti finora in questa seduta verranno azzerati. Poi potrai ripartire con Avvia seduta.</string>
+    <!-- Cronometro -->
+    <string name="stopwatch">Cronometro</string>
+    <!-- Nella barra in basso: corto, così non va a capo. -->
+    <string name="stopwatch_tab">Crono</string>
+    <plurals name="laps_count">
+        <item quantity="one">%d giro</item>
+        <item quantity="other">%d giri</item>
+    </plurals>
+    <string name="lap">Giro</string>
+    <string name="lap_n">Giro %1$d</string>
+    <string name="lap_summary">Giro %1$d · %2$s</string>
+    <string name="reset">Azzera</string>
+    <string name="alert_every">Avviso ogni</string>
+    <string name="alert_on_each">A ogni avviso</string>
+    <string name="close_stopwatch_title">Chiudere il cronometro?</string>
+    <string name="close_stopwatch_text">Il tempo e i giri verranno azzerati.</string>
+    <string name="alert_sound">Suono</string>
+    <string name="alert_voice">Voce</string>
+    <string name="alert_color">Colore</string>
+    <string name="replace_timer_title">C\'è un timer in corso</string>
+    <string name="replace_timer_text">Avviando il cronometro il timer in corso verrà fermato.</string>
+    <string name="stopwatch_running_back">Cronometro in corso · tocca per tornare</string>
+</resources>

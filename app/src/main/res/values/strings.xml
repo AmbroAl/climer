@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Climer</string>
+
+    <!-- Fasi -->
+    <string name="phase_prepare">Prepara</string>
+    <string name="phase_work">Lavora</string>
+    <string name="phase_rest">Riposa</string>
+    <string name="phase_cycle_rest">Pausa tra i cicli</string>
+    <string name="phase_cooldown">Break</string>
+    <!-- Scritto all'italiana perché la voce italiana lo pronunci come l'inglese "break". -->
+    <string name="phase_cooldown_spoken">brèik</string>
+
+    <!-- Voce -->
+    <string name="side_right_spoken">destra</string>
+    <string name="side_left_spoken">sinistra</string>
+    <string name="kg_spoken">%1$s chili</string>
+    <string name="speech_change">Cambia, %1$s, %2$s</string>
+    <string name="speech_ten_seconds">Dieci secondi</string>
+    <string name="speech_halfway">Metà</string>
+    <string name="speech_finished">Fine</string>
+    <string name="speech_block_start">Blocco: %1$s</string>
+    <plurals name="speech_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minuti</item>
+    </plurals>
+    <plurals name="speech_seconds">
+        <item quantity="one">%d secondo</item>
+        <item quantity="other">%d secondi</item>
+    </plurals>
+    <string name="speech_minutes_and_seconds">%1$s e %2$s</string>
+
+    <!-- Notifica -->
+    <string name="notification_channel">Timer in corso</string>
+    <string name="action_pause">Pausa</string>
+    <string name="action_resume">Riprendi</string>
+    <string name="action_stop">Stop</string>
+</resources>

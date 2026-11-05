@@ -1,0 +1,17 @@
+.superpowers/
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+captures/
+
+# materiale di riferimento personale
+reference image/
+*.docx
+
+# firma di release: mai in git (va conservata a parte, serve per ogni aggiornamento)
+keystore/
+keystore.properties
+dist/
