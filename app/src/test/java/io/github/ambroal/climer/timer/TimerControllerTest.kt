@@ -143,6 +143,38 @@ class TimerControllerTest {
     }
 
     @Test
+    fun `un risveglio in anticipo di un millisecondo non fa saltare il secondo`() = runTest {
+        // I delay seguono un orologio diverso da quello del timer: al risveglio il timer può essere ancora
+        // nel millisecondo prima del confine, e scattare subito dopo.
+        var lastWake = -1L
+        val lagging = Clock {
+            val t = testScheduler.currentTime
+            val early = t != lastWake
+            lastWake = t
+            1_000_000 + if (early) t - 1 else t
+        }
+        val remainingAtCountdown = mutableListOf<Long>()
+        var workStartRemaining: Long? = null
+        val c = TimerController(
+            clock = lagging,
+            store = store,
+            launcher = { },
+            completion = { },
+            cues = { cues, ui ->
+                if (cues.any { it is Cue.Countdown }) remainingAtCountdown += ui.snapshot.phaseRemainingMs
+                if (cues.any { (it as? Cue.PhaseStarted)?.phase?.type == PhaseType.WORK }) {
+                    workStartRemaining = workStartRemaining ?: ui.snapshot.phaseRemainingMs
+                }
+            },
+            scope = backgroundScope
+        )
+        c.start(run)
+        advanceTimeBy(10_500)
+        assertEquals(listOf(3_000L, 2_000L, 1_000L), remainingAtCountdown)
+        assertEquals(7_000L, workStartRemaining)
+    }
+
+    @Test
     fun `riavvia riporta il blocco all inizio e lo fa ripartire`() = runTest {
         val c = controller()
         c.start(run)

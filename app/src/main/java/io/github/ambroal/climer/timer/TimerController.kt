@@ -261,13 +261,7 @@ class TimerController @Inject constructor(
             loop?.cancel()
             loop = scope.launch {
                 while (isActive) {
-                    val snap = engine?.snapshot() ?: break
-                    val wait = if (run?.mode == RunMode.STOPWATCH) {
-                        if (snap.isRunning) nextStopwatchDelayMs(elapsedOf(snap)) else break
-                    } else {
-                        nextTickDelayMs(snap) ?: break
-                    }
-                    delay(wait)
+                    delay(delayToNextChangeMs() ?: break)
                     tick()
                 }
             }
@@ -276,6 +270,19 @@ class TimerController @Inject constructor(
             loop = null
             cues.onRunningChanged(false)
         }
+    }
+
+    /** Attesa fino al prossimo cambiamento rispetto all'ultimo stato pubblicato; null se non c'è più nulla da aspettare. */
+    @Synchronized
+    private fun delayToNextChangeMs(): Long? {
+        val e = engine ?: return null
+        val shown = previous ?: return null
+        val wait = if (run?.mode == RunMode.STOPWATCH) {
+            if (shown.isRunning) nextStopwatchDelayMs(elapsedOf(shown)) else return null
+        } else {
+            nextTickDelayMs(shown) ?: return null
+        }
+        return remainingWaitMs(wait, shown, e.snapshot())
     }
 
     private fun buildUi(current: ActiveRun, snap: TimerSnapshot): RunningUi {

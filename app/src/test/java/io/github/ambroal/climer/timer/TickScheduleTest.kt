@@ -21,6 +21,20 @@ class TickScheduleTest {
     fun `si sveglia anche alla meta di una fase lunga`() = assertEquals(400L, nextTickDelayMs(snap(12_900, duration = 25_000)))
 
     @Test
+    fun `l attesa si conta dallo stato mostrato, non da una lettura successiva`() {
+        // Mostrato a 6001 (display ancora "7"); l'orologio intanto è scattato a 6000: il confine è già qui.
+        assertEquals(0L, remainingWaitMs(1, shown = snap(6_001), now = snap(6_000)))
+    }
+
+    @Test
+    fun `il tempo speso dopo aver mostrato lo stato viene tolto dall attesa`() =
+        assertEquals(985L, remainingWaitMs(1_000, shown = snap(6_000), now = snap(5_985)))
+
+    @Test
+    fun `un cambiamento gia passato non da attese negative`() =
+        assertEquals(0L, remainingWaitMs(1_000, shown = snap(6_000), now = snap(4_500)))
+
+    @Test
     fun `in pausa o a fine timer non serve svegliarsi`() {
         assertNull(nextTickDelayMs(snap(6_500, running = false)))
         assertNull(nextTickDelayMs(TimerSnapshot(5, null, 0, 0, isRunning = false, isFinished = true)))
